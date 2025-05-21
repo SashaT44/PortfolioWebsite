@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ATVisuals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      font-family: 'Avenir', sans-serif;
+      background-color: #202121;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #000;
+      padding: 20px 50px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .navbar .logo {
+      font-size: 26px;
+      font-weight: 600;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 16px;
+    }
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+    .dropdown .dropbtn {
+      font-size: 16px;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: #334a94;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    .dropdown-content a:hover {
+      background-color: #303030;
+      color: white;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    form.example {
+      display: flex;
+      max-width: 600px;
+      margin: 120px auto 40px;
+    }
+    form.example input[type=text] {
+      flex: 1;
+      padding: 10px;
+      font-size: 17px;
+      border: 1px solid grey;
+      outline: none;
+      background: #f1f1f1;
+    }
+    form.example button {
+      padding: 10px;
+      background: #344a94;
+      color: white;
+      font-size: 17px;
+      border: 1px solid grey;
+      border-left: none;
+      cursor: pointer;
+    }
+    form.example button:hover {
+      background: #0b7dda;
+    }
+    header {
+      text-align: center;
+      padding: 100px 20px 40px;
+      color: #c8c5bf;
+      font-size: 24px;
+    }
+    .slideshow-container {
+      max-width: 900px;
+      margin: auto;
+      margin-bottom: 60px;
+      overflow: hidden;
+      border-radius: 8px;
+      position: relative;
+    }
+    .mySlides {
+      display: none;
+      text-align: center;
+      padding: 10px;
+    }
+    .mySlides img {
+      width: auto;
+      height: auto;
+      display: block;
+      margin: auto;
+      border-radius: 8px;
+      object-fit: contain;
+      max-height: 500px;
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 24px;
+      user-select: none;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev {
+      left: 0;
+      border-radius: 0 3px 3px 0;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    footer {
+      background: linear-gradient(to bottom, #202121, #334a93);
+      padding: 20px;
+      text-align: center;
+      color: #c8c5bf;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <img src="logo.png" alt="Logo" style="height: 40px; margin-right: 20px;" />
+    <a href="#home">Home</a>
+    <a href="#about_me">About Me</a>
+    <a href="resume.html">Resume</a>
+    <a href="contactme.html">Contact Me</a>
+    <div class="dropdown">
+      <button class="dropbtn">Portfolio <i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content">
+        <a href="#personal">Personal Projects</a>
+        <a href="#academic">Academic Projects</a>
+      </div>
+    </div>
+  </div>
+
+  <form class="example" action="/action_page.php">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </form>
+
+  <header id="home">Design Portfolio | COMD 2451</header>
+
+  <section id="personal">
+    <h2 style="text-align: center; color: #c8c5bf;">Personal Projects</h2>
+    <div class="slideshow-container">
+      <div class="mySlides personal"><img src="cloud_surfing.jpg" alt="Slide 1"></div>
+      <div class="mySlides personal"><img src="memento_mori.PNG" alt="Slide 2"></div>
+      <div class="mySlides personal"><img src="boogie_woogie_wu.jpg" alt="Slide 3"></div>
+      <div class="mySlides personal"><img src="Biking_in_Clouds.PNG" alt="Slide 4"></div>
+      <div class="mySlides personal"><img src="Personal1.jpg" alt="Slide 5"></div>
+      <div class="mySlides personal"><img src="Personal3.jpg" alt="Slide 6"></div>
+      <a class="prev" onclick="plusSlides(-1, 'personal')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 'personal')">&#10095;</a>
+    </div>
+  </section>
+
+  <section id="academic">
+    <h2 style="text-align: center; color: #c8c5bf;">Academic Projects</h2>
+    <div class="slideshow-container">
+      <div class="mySlides academic"><img src="Anti_Hate_Initative.jpg" alt="Slide 1"></div>
+      <div class="mySlides academic"><img src="Colorin_CHI.jpg" alt="Slide 2"></div>
+      <div class="mySlides academic"><img src="Logov2.png" alt="Slide 3"></div>
+      <div class="mySlides academic"><img src="Logov3.png" alt="Slide 4"></div>
+      <div class="mySlides academic"><img src="ProjectSnickers1.jpg" alt="Slide 5"></div>
+      <div class="mySlides academic"><img src="ProjectSnickers2.jpg" alt="Slide 6"></div>
+      <div class="mySlides academic"><img src="ProjectSnickers3.jpg" alt="Slide 7"></div>
+      <a class="prev" onclick="plusSlides(-1, 'academic')">&#10094;</a>
+      <a class="next" onclick="plusSlides(1, 'academic')">&#10095;</a>
+    </div>
+  </section>
+
+  <div id="about_me" class="about_me" style="padding: 40px; max-width: 800px; margin: auto; color: #c8c5bf;">
+    <h3 style="font-size: 32px; margin-bottom: 20px;">ABOUT ME</h3>
+    <p style="font-size: 18px; line-height: 1.6;">
+      Hi, my name is Sasha. I'm an aspiring graphic designer currently studying at NYC College of Technology.
+      I've spent years developing my artistic skills across various mediums, specifically through drawing.
+      <br><br>
+      I've completed two design internships. In one, I created an Anti-Hate Initiative flyer for the event opening.
+      In the other, I helped develop the initial visual identity and branding for a new project, including a style guide.
+      <br><br>
+      I'm passionate about creating work that pushes me to think outside the box and I'm always eager to learn new skills.
+    </p>
+  </div>
+
+  <footer class="w3-container w3-center w3-margin-top">
+    <div
+      style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      ">
+
+      <div style="font-size: 50px; font-weight: bold">AT Visuals</div>
+      <div class="w3-xlarge w3-margin-bottom">
+        <i class="fa fa-instagram w3-hover-opacity w3-margin-right"></i>
+        <i class="fa fa-pinterest w3-hover-opacity w3-margin-right"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-margin-right"></i>
+      </div>
+    </div>
+    <div class="w3-small w3-opacity">
+      <a href="#" class="w3-margin-right w3-hover-text-white">HOME</a>
+      <a href="#about_me" class="w3-margin-right w3-hover-text-white">ABOUT ME</a>
+      <a href="resume.html" class="w3-margin-right w3-hover-text-white">RESUME</a>
+      <a href="contactme.html" class="w3-margin-right w3-hover-text-white"
+        >CONTACT</a>
+  
+    <p class="w3-small w3-opacity" style="text-align:center; margin-top:10px;">&copy; 2025 Sasha / AT Visuals. All rights reserved.</p>
+    </div>
+ </footer>
+
+  <script>
+    const slideIndices = {
+      personal: 1,
+      academic: 1
+    };
+
+    function plusSlides(n, category) {
+      showSlides(slideIndices[category] += n, category);
+    }
+
+    function showSlides(n, category) {
+      const slides = document.getElementsByClassName(category);
+      if (n > slides.length) { slideIndices[category] = 1; }
+      if (n < 1) { slideIndices[category] = slides.length; }
+
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      slides[slideIndices[category] - 1].style.display = "block";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      showSlides(slideIndices.personal, 'personal');
+      showSlides(slideIndices.academic, 'academic');
+    });
+  </script>
+</body>
+</html>
